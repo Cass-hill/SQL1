@@ -1,0 +1,26 @@
+CREATE TABLE flower_shop 
+(id INTEGER PRIMARY KEY, name TEXT, quantity INTEGER, price INTEGER, sold INTEGER, holiday TEXT);
+
+INSERT INTO flower_shop VALUES (1,"sunflower", 15, 9.00, 7, "birthday");
+INSERT INTO flower_shop VALUES (2, "rose",12,30.00, 12, "Anniversary");
+INSERT INTO flower_shop Values (3,"Liles", 14, 14.00, 13, "sympathy");
+INSERT INTO flower_shop Values (4, "Daisy", 7, 15.00, 2, "Mother's");
+INSERT INTO flower_shop Values (5, "carnations", 3, 7.00, 6, "Congrats");
+INSERT INTO flower_shop Values (6, "Gardenia", 14, 9.00, 8, "Anniversary");
+INSERT INTO flower_shop Values (7, "Orchid", 20, 7.00, 6, "Birthday");
+INSERT INTO flower_shop Values (8, "tulip", 10, 7.00, 9, "sympathy");
+INSERT INTO flower_shop Values (9, "peony", 10,14.00, 9, "Mother's");
+INSERT INTO flower_shop Values(10, "Dahila", 14, 19.00, 12, "Congrats");
+INSERT INTO flower_shop Values (11, "marigold", 10, 9.00, 5, "Anniverasry");
+INSERT INTO flower_shop Values (12, "Aster", 17, 16.00, 4, "Birthday");
+INSERT INTO flower_shop Values (13, "Azalea", 14, 18.00, 12, "Sympathy");
+INSERT INTO flower_shop Values (14,"buttercup", 7, 13.00, 4, "Mother's");
+INSERT INTO flower_shop Values (15, "Zinnia", 7, 13.00, 4, "Congrats");
+
+--display the database order by price in ascending order
+SELECT * FROM flower_shop ORDER BY price asc;
+
+---How many flowers were sold.
+SELECT sum(sold) FROM flower_shop;
+--- display what flowers were bought for which holiday.
+SELECT * FROM flower_shop ORDER BY holiday asc;
