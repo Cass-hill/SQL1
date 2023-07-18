@@ -127,3 +127,11 @@ JOIN invoice_items AS ii ON t.trackid = ii.trackid
 JOIN invoices AS i
 ON ii.invoiceid = i.invoiceid
 GROUP BY ii.Quantity;
+
+--Show a playlist of "Heavy Metal Classic'--
+SELECT p.playlistid, pt.trackid,p.name, t.name AS 'Track' FROM playlists AS p
+JOIN playlist_track AS pt
+ON p.playlistid = pt.playlistid 
+JOIN tracks AS t
+ON pt.trackid =t.trackid
+WHERE p.name = 'Heavy Metal Classic';
